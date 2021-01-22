@@ -59,3 +59,45 @@ console.log(temp);
 
 console.log(a.reverse());
 
+
+// zadanie 4
+var a = [1,4,5,120,8];
+function sumtab(tab) {
+  let sum=0;
+  for (let i=0; i<tab.length;i++){
+    sum += tab[i];
+  }
+  console.log(sum);
+}
+sumtab(a);
+
+// zadanie 5
+var a = [1,4,5,120,8];
+function zad5(tab) {
+  let sum=0;
+  for (let i=0; i<tab.length;i++){
+    sum += tab[i];
+  }
+  let sr = sum/tab.length;
+  for(let j = 0; j<tab.length;j++) {
+    let b = tab[j] * sr;
+    console.log(b);
+  }
+}
+zad5(a);
+
+// zadanie 6
+var a = [1,4,5,120,8];
+function zad6(tab) {
+  let sum=0;
+  let counter = 0;
+  for (let i = 0; i<tab.length; i++){
+    if (tab[i] % 2 == 0) {
+      sum += tab[i];
+      counter++;
+    }
+  }
+  console.log(sum/counter);
+
+}
+zad6(a);
