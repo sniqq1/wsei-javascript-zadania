@@ -101,3 +101,14 @@ function zad6(tab) {
 
 }
 zad6(a);
+
+// zadanie 7
+let arr = [1,3,-4,-5,8,0];
+function zad7(arr) {
+  newArr =  arr.sort((a,b) => a-b);
+  console.log(newArr);
+}
+zad7(arr);
+
+
+
