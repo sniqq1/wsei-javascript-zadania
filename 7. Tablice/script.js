@@ -122,3 +122,11 @@ function zad8(arr1, arr2) {
 zad8(arr1,arr2);
 
 
+//zadanie 9
+let arr1 = [1,3,-4,-5,8,0];
+
+function zad9(array, elemToDelete) {
+      return array.filter((item) => item != elemToDelete);
+}
+console.log(zad9(arr1,-4));
+
