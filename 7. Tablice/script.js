@@ -110,5 +110,15 @@ function zad7(arr) {
 }
 zad7(arr);
 
+//zadanie 8
+let arr1 = [1,3,-4,-5,8,0];
+let arr2 = [2,5,-12,3];
+function zad8(arr1, arr2) {
+    let sum = 0;
+    arr1.forEach((v,i) => sum += i);
+    arr2.forEach((v,i) => sum += i); 
+  console.log(sum);
+}
+zad8(arr1,arr2);
 
 
