@@ -130,3 +130,11 @@ function zad9(array, elemToDelete) {
 }
 console.log(zad9(arr1,-4));
 
+// zadanie 10
+let arr1 = [1,3,-4,-5,8,0];
+
+function zad10(array) {
+      return array.map((item) => item*-1);
+}
+console.log(zad10(arr1));
+
