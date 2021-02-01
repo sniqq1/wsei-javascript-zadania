@@ -34,3 +34,46 @@ const obj ={
 }
 obj.tablica([1,2,3,4,5]);
 console.log(obj.sum);
+
+//zadanie4
+const car = {
+  name: 'Ford',
+  color: 'black',
+  wheels: 4,
+}
+
+for (var key in car) {
+    console.log(`${key}: ${car[key]}`)
+};
+
+//zadanie 5
+const car = {
+  name: 'Ford',
+  color: 'black',
+  wheels: 4,
+  owner: {
+    name: 'Patryk',
+    surname: 'Wojtaszek'
+  }
+}
+
+for (let key in car.owner) {
+    console.log(`${key}: ${key.value}`)
+};
+
+//zadanie6
+const car = {
+  name: 'Ford',
+  color: 'black',
+  wheels: 4,
+  owner: {
+    name: 'Patryk',
+    surname: 'Wojtaszek'
+  }
+}
+
+car.model = 'Fiesta';
+car.hello = () => {
+  console.log("Hello");
+}
+car.hello();
