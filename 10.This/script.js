@@ -24,3 +24,21 @@ person.info();
 person.addYear();
 person.addYear();
 person.info();
+
+// zadanie 2
+person.dishes= ['Schabowy','Pierogi'];
+person2.dishes = ['Ogórki','Mizieria'];
+function printDishes() {
+  console.log(this.dishes);
+}
+
+function addDish(dish) {
+  this.dishes.push(dish)
+}
+person.printDishes = printDishes;
+person2.printDishes = printDishes;
+person.addDish = addDish;
+person2.addDish = addDish;
+person.printDishes();
+person.addDish('bigos');
+person.printDishes();
