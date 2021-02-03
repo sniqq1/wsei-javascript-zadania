@@ -9,7 +9,7 @@ class Person {
     this.jezyk = jezyk;
   } 
   zmienWiek(wiek) {
-    this.wiek = wiek;
+    this.wiek = wiek;f
   }
   zmienMiasto(miasto) {
     this.miasto = miasto;
