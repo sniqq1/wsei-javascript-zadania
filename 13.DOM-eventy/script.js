@@ -52,3 +52,11 @@ function ex5 () {
   }
 }
 button.addEventListener('click', ex5);
+
+
+//zadanie 6
+document.addEventListener('scroll', (e) => {
+    document.body.style.backgroundColor = window.scrollY <= 200
+        ? 'white'
+        : 'red';
+});
