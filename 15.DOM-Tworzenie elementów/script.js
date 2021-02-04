@@ -63,3 +63,81 @@ secondDiv.append(thirdDiv);
 secondDiv.append(secondSpan);
 
 document.body.append(secondDiv, document.getElementById('root'));
+
+
+// zadanie 7
+var firstList = document.createElement('ol');
+firstList.id = 'firstList';
+var firstButton = document.createElement('button');
+firstButton.id = 'firstButton';
+firstButton.innerText =' list nr 1';
+
+  var q = document.createElement('li');
+  q.innerText = "Q";
+  var w = document.createElement('li');
+  w.innerText = "W";
+  var e = document.createElement('li');
+  e.innerText = "E";
+  var r = document.createElement('li');
+  r.innerText = "R";
+  var t = document.createElement('li');
+  t.innerText = "T";
+  var y = document.createElement('li');
+  y.innerText = "Y";
+
+  firstList.appendChild(q);
+  firstList.appendChild(w);
+  firstList.appendChild(e);
+  firstList.appendChild(r);
+  firstList.appendChild(t);
+  firstList.appendChild(y);
+var secondList = document.createElement('ol');
+secondList.id = 'secondList';
+var secondButton = document.createElement('button');
+secondButton.id = 'secondButton';
+secondButton.innerText =' list nr 2';
+
+root.appendChild(firstList);
+root.appendChild(secondList);
+root.appendChild(firstButton);
+root.appendChild(secondButton); 
+
+  function oneToTwo(){
+    var listOne =document.querySelector("#firstList");
+    var listTwo =document.querySelector("#secondList");
+    var listOfElements1 = listOne.getElementsByTagName("li");
+    var listOfElements2 = listTwo.getElementsByTagName("li");
+    var last = listOfElements1[listOfElements1.length-1];
+    var lastText = last.innerText;
+    var newLi = document.createElement('li'); 
+    newLi.innerText = lastText;
+    listTwo.appendChild(newLi);
+    listOne.removeChild(last);
+        if( listOfElements1.length < 1){
+      document.querySelector("#firstButton").disabled = true;
+    }
+    if(listOfElements2.length >= 1){
+      document.querySelector("#secondButton").disabled = false;
+    }
+  }
+  document.querySelector('#firstButton').addEventListener('click',oneToTwo);
+
+function twoToOne() {
+  var listOne =document.querySelector("#firstList");
+    var listTwo =document.querySelector("#secondList");
+    var listOfElements1 = listOne.getElementsByTagName("li");
+    var listOfElements2 = listTwo.getElementsByTagName("li");
+    var last = listOfElements2[listOfElements2.length-1];
+    var lastText = last.innerText;
+    var newLi = document.createElement('li'); 
+    newLi.innerText = lastText;
+    listOne.appendChild(newLi);
+    listTwo.removeChild(last);
+        if( listOfElements2.length < 1){
+      document.querySelector("#firstButton").disabled = true;
+    }
+    if(listOfElements1.length >= 1){
+      document.querySelector("#secondButton").disabled = false;
+    }  
+}
+ document.querySelector('#secondButton').addEventListener('click', twoToOne);
