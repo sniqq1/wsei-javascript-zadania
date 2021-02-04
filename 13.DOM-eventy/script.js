@@ -39,3 +39,16 @@ document.getElementById('input-test').addEventListener('input', (e) => {
         ? 'nie można wpisywać cyfr'
         : null;
 });
+
+//zadanie 5
+const button = document.getElementById('ex5-button');
+const buttonCounter = document.getElementById('ex5');
+let counter = 0;
+function ex5 () {
+  counter++;
+  buttonCounter.innerText = counter;
+  if(counter >= 10) {
+    button.removeEventListener('click', ex5);
+  }
+}
+button.addEventListener('click', ex5);
